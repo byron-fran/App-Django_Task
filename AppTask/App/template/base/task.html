@@ -1,0 +1,38 @@
+{% extends 'main.html '%}
+{% block content %}
+
+<body>
+    <div class="task__links">
+
+        {% if request.user.is_authenticated %}
+
+        <p class="task__name">Bienvenido: <span>{{ request.user|title }}</span></p>
+        <a href="{% url 'logout' %}" class="task__btn--sesion"> Logout</a>
+        {% else %}
+        <a href="{% url 'login' %}" class="task__btn--sesion"> Login</a>
+        {% endif %}
+    </div>
+    <form class="form__searchbar" method="get">
+
+        <input class="task__input" type="text" name="search" value="{{value_search}}" />
+        <input class="task__search--input" type="submit" value="search" />
+
+    </form>
+    <h1 class="task__title">Lista de tareas</h1>
+    <a href="{% url 'create_task' %}" class="task__btn--add">Crear nueva tarea</a>
+    <h3>{{count}} <span>tareas{{count|pluralize}} </span> <span>complete{{count|pluralize}}</span></h3>
+    {% for task in tasks %}
+    <div class="task__card">
+        <h2>{{task.title}}</h2>
+        <!--             <a href=" {% url 'detail' task.id %}">Ver Tarea</a>-->
+        <div class="task__btn--flex">
+            <a class="task__btn--edit" href="{% url 'edit' task.id %}">Editar</a>
+            <a class="task__btn--delete" href="{% url 'delete' task.id %}">Eliminar</a>
+        </div>
+    </div>
+
+    {% empty %}
+    <p class="task__none">No hay tareas</p>
+    {% endfor %}
+</body>
+{% endblock content %}

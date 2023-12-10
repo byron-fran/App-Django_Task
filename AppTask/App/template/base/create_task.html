@@ -1,0 +1,14 @@
+
+{% extends 'main.html' %}
+{% block content %}
+
+<h1 class="form__title--update">Create Task</h1>
+  <form class="form__update" method='post'>
+    {% csrf_token %}
+    {{ form }}
+
+    <button type='submit'>Agregar</button>
+</form>
+
+
+{% endblock content %}

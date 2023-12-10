@@ -1,0 +1,252 @@
+body{
+    box-sizing: border-box;
+    margin: 0 auto;
+    background: #cbd5e1;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
+     width: 90%;
+}
+.container{
+    width: 100%;
+}
+@media(min-width: 768px){
+    .container{
+        width: 90%;
+    }
+}
+.task__links{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem auto;
+
+    }
+.task__none{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+p{
+    margin: 0;
+}
+.form__searchbar{
+    display: flex;
+    column-gap: 1.5rem;
+}
+.form__searchbar input:nth-child(2){
+    width: 20%;
+}
+.task__name span {
+    font-weight: 900;
+}
+.task__btn--sesion{
+    color : #fff;
+    background: #0AC65A;
+    padding: 0.5rem;
+    border-radius: 5px;
+    width: 80px;
+    text-align: center;
+
+}
+.task__btn--sesion:hover{
+    background:#05A247;
+}
+.task__input {
+    width: 90%;
+    border:none;
+    padding: 0.5rem;
+    border-radius: 5px;
+
+}
+.task__search--input{
+    background:#094CB9;
+    color : #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+
+}
+.task__title{
+    color : #000;
+}
+.task__btn--add{
+    background : #4f45e5;
+    color : #fff;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+.task__btn--add:hover{
+   background : #4339D7;
+   cursor: pointer;
+}
+.task__card {
+    background: #fff;
+    margin: 0 auto 1rem auto;
+    border-radius: 5px;
+    padding: 0.5rem;
+
+}
+
+.task__btn--flex{
+    display: flex;
+    align-items : center;
+    column-gap: 1rem;
+}
+.task__btn--delete {
+    color : #fff;
+    background : #ff0000;
+    padding : 0.5rem;
+    width: 80px;
+    text-align:center;
+    border-radius: 5px;
+
+}
+.task__btn--delete:hover{
+    background : #A90000;
+    cursor:  pointer;
+}
+.task__btn--edit {
+    color : #fff;
+    background : #4f45e1;
+    padding : 0.5rem;
+    width: 80px;
+    text-align:center;
+    border-radius: 5px;
+
+}
+.task__btn--edit:hover{
+    background : #4339D7;
+   cursor: pointer;
+}
+
+.form__title{
+
+    background: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    width: 100%;
+    margin : 1rem auto;
+    display: block;
+}
+
+
+
+.label-class{
+    display: block;
+}
+@media(min-width: 768px){
+    .form__title{
+        width: 60%;
+    }
+}
+.form__container{
+    margin: 0 auto;
+
+}
+
+/* update form */
+.form__title--update {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+.form__update{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form__update label, input, textarea {
+    width: 50%;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+
+}
+.form__update textarea{
+    height: 200px;
+    resize: none;
+}
+
+.form__update > button {
+    background: #4f45e1;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    width: 50%;
+    display: block;
+    border-radius: 5px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.form__update > button:hover {
+    background: #3a31b4;
+    cursor: pointer;
+}
+/* Delete task */
+
+.delete__container {
+    width: 100%;
+
+}
+.delete__cancel {
+    text-align: center;
+    margin: 1rem auto;
+    font-size : 1.3rem;
+
+    text-transform: uppercase;
+    display: block;
+}
+.form__delete{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form__delete > button {
+    background: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding : 0.5rem;
+}
+.form__delete > button:hover {
+    background :#940c0c;
+    cursor: pointer;
+}
+/* Login */
+.login__container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__login input{
+    width: 100%;
+    box-sizing: border-box;
+
+}
+.form__login label {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.login__button {
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    background: #094CB9;
+    color : #fff;
+    border-radius: 5px;
+    margin: 1rem auto;
+
+}
+.login__button:hover {
+    background:#073a8d;
+    cursor: pointer;
+}
