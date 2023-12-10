@@ -1,5 +1,6 @@
 {% extends 'main.html' %}
 {% block content %}
+
 <div class="login__container">
     <form class="form__login" method="post">
         {% csrf_token %}
@@ -11,4 +12,5 @@
         <a  href="{% url 'register' %}">Do not have account ?</a>
     </p>
 </div>
+
 {% endblock content %}

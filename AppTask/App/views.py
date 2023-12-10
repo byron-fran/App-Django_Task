@@ -23,11 +23,9 @@ class LoginUser(LoginView):
 
 class RegisterView (FormView):
     template_name = 'register.html'
-    form_class = TaskForm
-
     success_url = reverse_lazy('task')
     redirect_authenticated_user = True
-
+    form_class = UserCreationForm
     def form_valid(self, form):
         user = form.save()
         if user is not None:
@@ -63,6 +61,11 @@ class TaskCreateView(LoginRequiredMixin, CreateView):
     template_name = 'create_task.html'
     success_url = reverse_lazy('task')
     fields = ['title', 'description', 'complete']
+    
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(TaskCreateView, self).form_valid(form)
+    
     
 class TaskDetailView(LoginRequiredMixin, DetailView):
     model = Task
