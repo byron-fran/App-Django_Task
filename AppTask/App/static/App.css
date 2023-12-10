@@ -4,7 +4,12 @@ body{
     background: #cbd5e1;
     font-family: 'Lato', sans-serif;
     font-family: 'Roboto', sans-serif;
-     width: 90%;
+    width: 90%;
+    
+}
+
+.pru {
+    color:  red;
 }
 .container{
     width: 100%;
@@ -250,3 +255,7 @@ p{
     background:#073a8d;
     cursor: pointer;
 }
+
+
+/* form register */
+

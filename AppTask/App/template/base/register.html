@@ -1,10 +1,41 @@
 {% extends 'main.html' %}
-
 {% block content %}
-<div class="login__container">
+<style>
+    .form__register {
+        width:100% ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+       margin: 0 auto;
+    
+    
+    }
+    .form__register div {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+    @media(min-width: 768px){
+        .form__register {
+            width: 50%;
+            
+        }
+    }
+</style>
+<main class="form__register" >
+    <div >
     <form class="form__login" method="post">
         {% csrf_token %}
-        {{form.as_p}}
+        <label>{{form.username.label}}</label>
+        {{form.username}}
+        <label>{{form.password1.label}}</label>
+        {{form.password1}}
+        <label>{{form.password2.label}}</label>
+        {{form.password2}}
         <button class="login__button" type='submit'>Register</button>
     </form>
 
@@ -12,5 +43,8 @@
         <a  href="{% url 'login' %}">Do have you an account ?</a>
     </p>
 </div>
+
+</main>
+
 
 {% endblock content %}
